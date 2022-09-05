@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Goldman", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #5cdb95;
+  height: 100vh;
+}
+
+.settings-btn {
+  background-color: #edf5e1;
+  color: black;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+}
+
+.settings-btn:active {
+  transform: scale(0.9);
+}
+.settings-btn:hover {
+  background-color: #edf5e1c9;
+}
+.settings-btn:focus {
+  outline: none;
+}
+
+header {
+  width: 100%;
+  padding: 1.6rem 3rem;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #379683;
+  color: #edf5e1;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+header.show {
+  transform: translateY(-100%);
+}
+
+header .invisible-item {
+  visibility: hidden;
+}
+
+header form label {
+  padding: 0 0.5rem;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+header form select {
+  width: 90px;
+  padding: 0.5rem 0.2rem;
+  border-radius: 3px;
+  background-color: #8ee4af;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+header form select:focus {
+  outline: none;
+}
+
+header a {
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: #378575;
+  border: 0.2rem solid #05386b;
+  font-weight: bold;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(0, -50%);
+}
+
+header a:hover {
+  border: 2px solid whitesmoke;
+  background-color: #222e2eb2;
+}
+
+header a:active {
+  opacity: 0.8;
+}
+
+main {
+  background-color: #05386b;
+  color: #edf5e1;
+  border-radius: 5px;
+  padding: 2rem;
+  -webkit-box-shadow: 8px 10px 13px -1px rgba(5, 56, 107, 0.67);
+  -moz-box-shadow: 8px 10px 13px -1px rgba(5, 56, 107, 0.67);
+  box-shadow: 8px 10px 13px -1px rgba(5, 56, 107, 0.67);
+  text-align: center;
+  width: 50rem;
+  height: 26rem;
+  margin: 0 auto;
+  margin-top: 8rem;
+  position: relative;
+}
+
+main h2 {
+  background-color: #00274f;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  margin: 0 0 4rem 0;
+}
+
+#time_container {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 8rem;
+  left: 2rem;
+}
+
+#score_container {
+  position: absolute;
+  font-size: 1.5rem;
+
+  top: 8rem;
+  right: 2rem;
+}
+
+main small {
+  position: absolute;
+  font-size: 1.31rem;
+
+  top: 12rem;
+  transform: translateX(-50%);
+}
+
+main .word {
+  position: absolute;
+  font-size: 3rem;
+
+  top: 14rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main input {
+  position: absolute;
+  top: 19rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 30rem;
+  padding: 1.2rem 2rem;
+  margin-top: 1.5rem;
+}
+
+main input:focus {
+  outline-color: #05386b;
+}
+
+#game_end_container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 99;
+}
+
+#game_end_container h1 {
+  top: 20%;
+}
+
+#game_end_container p {
+  font-size: 18px;
+  top: 80%;
+  left: 50%;
+}
+
+#game_end_container button {
+  position: absolute;
+  font-size: 1.8rem;
+  top: 70%;
+  left: 50%;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  border: 2px solid #5cdb95;
+  font-weight: bold;
+  transform: translateX(-50%);
+}
+
+#game_end_container button:hover {
+  border: 2px solid #00274f;
+}
+
+#game_end_container button:active {
+  opacity: 0.8;
+}
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+  header {
+    padding-left: 7rem;
+  }
+  header .invisible-item {
+    display: none;
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  header form label {
+    display: none;
+  }
+
+  main {
+    width: 38rem;
+  }
+}

@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Goldman", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #00abe1;
+  color: #f2f2f2;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  padding: 1.6rem 3rem;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #161147;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+header .invisible-item {
+  visibility: hidden;
+}
+
+header h1 {
+  text-decoration: underline;
+  text-align: center;
+  color: #edf5e1;
+  font-size: 2.7rem;
+}
+
+header a {
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: #0095dd;
+  border: 2px solid whitesmoke;
+
+  font-weight: bold;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(0, -50%);
+}
+
+header a:hover {
+  border: 0.2rem solid whitesmoke;
+}
+
+main {
+  width: 60rem;
+  height: 60rem;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.elements {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid green; */
+}
+
+.element {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 5rem;
+  transition: 100ms;
+  opacity: 0.9;
+}
+
+.element:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.element:active {
+  transform: scale(1.4);
+}
+
+.results {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.results .result {
+  text-align: center;
+}
+
+.results .result h2 {
+  font-size: 1.5rem;
+  background-color: #161f6d;
+  color: whitesmoke;
+  padding: 0.9rem 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.results .result p {
+  font-size: 1.3rem;
+}
+
+.history {
+  display: flex;
+  /* border: 2px solid red; */
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  margin-top: 2rem;
+}
+
+.selected {
+  font-size: 3rem;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.selected.winner {
+  opacity: 1;
+  font-size: 4rem;
+}
+
+.restartBtn {
+  position: absolute;
+  bottom: 15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #161f6d;
+  color: whitesmoke;
+  padding: 1.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transform-origin: center;
+  opacity: 0.9;
+}
+
+.restartBtn:focus {
+  outline: 0;
+}
+.restartBtn:hover {
+  opacity: 1;
+}
+
+.restartBtn:active {
+  font-size: 1.8rem;
+}
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  header .invisible-item {
+    display: none;
+  }
+
+  header a {
+    font-size: 1.3rem;
+  }
+
+  main {
+    width: 55rem;
+    height: 55rem;
+    margin-top: 7rem;
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  header a {
+    top: 110%;
+    right: 50%;
+    transform: translate(50%, 0%);
+    font-size: 1.8rem;
+  }
+
+  header .invisible-item {
+    display: inline-block;
+  }
+
+  main {
+    width: 40rem;
+    height: 50rem;
+    margin-top: 20rem;
+  }
+
+  .element {
+    font-size: 6rem;
+  }
+
+  .selected {
+    font-size: 4rem;
+  }
+}

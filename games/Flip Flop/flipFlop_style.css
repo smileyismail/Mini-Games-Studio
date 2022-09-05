@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Goldman", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-color: #75c9b7;
+}
+
+header {
+  width: 100%;
+  padding: 1.6rem 3rem;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #161147;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+header .invisible-item {
+  visibility: hidden;
+}
+
+header h1 {
+  text-decoration: underline;
+  text-align: center;
+  color: #edf5e1;
+  font-size: 2.7rem;
+}
+
+header a {
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #161147;
+  background-color: #75c9b7;
+  font-weight: bold;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(0, -50%);
+}
+header a:hover {
+  border: 2px solid whitesmoke;
+}
+
+.container {
+  border-radius: 5px;
+  width: 45rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.messageContainer {
+  position: relative;
+  background-color: #abd699;
+  height: 8rem;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.messageContainer .score {
+  position: absolute;
+  padding: 3px 7px;
+  background-color: #ffe26a;
+  border-radius: 5px;
+  left: 1%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  font-size: 1.6rem;
+}
+
+.messageContainer span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.messageContainer button {
+  position: absolute;
+  padding: 0.4rem 0.8rem;
+  background-color: #ffe26a;
+  font-family: inherit;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: 0;
+  top: 50%;
+  right: -9%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  opacity: 0.7;
+  display: none;
+}
+
+.messageContainer button:hover {
+  opacity: 1;
+}
+
+.cards_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #c7ddcc;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.image {
+  border: 2px solid black;
+  margin: 1rem;
+  width: 9rem;
+  height: 10rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  padding: 1rem 0.5rem;
+  background-color: whitesmoke;
+}
+
+.image:active {
+  transform: scale(1.1);
+}
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  header a {
+    font-size: 1.3rem;
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  header .invisible-item {
+    display: none;
+  }
+
+  .container {
+    margin-top: 10rem;
+  }
+
+  .messageContainer span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

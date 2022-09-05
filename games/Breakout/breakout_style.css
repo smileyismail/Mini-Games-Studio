@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Goldman", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #0095dd;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  padding: 1rem 3rem;
+  border-radius: 0px 0px 10px 10px;
+  background-color: whitesmoke;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+header .showRules_btn {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #0095dd;
+  font-weight: bold;
+  color: whitesmoke;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  background-color: #222;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+header h1 {
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
+header a {
+  padding: 1.2rem 2.4rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: #0095dd;
+  font-size: 1.4rem;
+  border: 2px solid black;
+}
+
+/* #show_btn {
+  position: absolute;
+  top: 22px;
+  left: 30px;
+} */
+
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(75, 74, 74);
+  width: 25%;
+  color: whitesmoke;
+  padding: 3rem;
+  line-height: 2;
+  font-size: 2rem;
+  transform: translateX(-40rem);
+  transition: transform 1s ease-in-out;
+}
+
+.rules.show {
+  transform: translateX(0);
+}
+
+.rules h2 {
+  text-decoration: underline;
+}
+
+canvas {
+  background: whitesmoke;
+  display: block;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+}

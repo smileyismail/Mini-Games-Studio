@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Goldman", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: rgb(177, 255, 60);
+  background-image: url(assets/Background.png), url(assets/Background\ Flip.png);
+  background-repeat: no-repeat;
+  background-position: bottom left, bottom right;
+  background-size: 70rem 60rem;
+}
+
+header {
+  background-color: #68a50d;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 3rem;
+  width: 100%;
+  padding: 1rem 3rem;
+  position: relative;
+}
+
+header .invisible-item {
+  visibility: hidden;
+}
+
+header h1 {
+  text-decoration: underline;
+  font-size: 3rem;
+}
+
+header a {
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: #d8ff49;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(0, -50%);
+}
+
+header a:hover {
+  background-color: #d8ff4999;
+  border: 2px solid black;
+}
+
+main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.score {
+  background-color: #a8e64b;
+  /* display: inline-block; */
+  padding: 0.5rem 1rem;
+  border: 0.5rem solid green;
+  border-top: 0.5rem solid green;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  float: right;
+  position: fixed;
+  font-weight: bold;
+}
+
+.board {
+  width: 60rem;
+  height: 60rem;
+  border: 0.5rem solid green;
+  /* background-color: rgb(177, 255, 60); */
+  border-radius: 7px;
+  background: linear-gradient(145deg, #bdff40, #9fe636);
+  box-shadow: 0.8rem 0.8rem 2rem #8ac72f, -0.8rem -0.8rem 2rem #d8ff49;
+
+  display: grid;
+  grid-template-rows: repeat(25, 1fr);
+  grid-template-columns: repeat(25, 1fr);
+}
+
+.snakeHead {
+  background-color: rgb(0, 87, 0);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.snakeBody {
+  /* background-color: rgb(152, 248, 9); */
+  background-image: url("assets/skin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+}
+
+.food {
+  /* background-color: black; */
+  background-image: url("assets/apple.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.buttons {
+  padding: 3rem 0rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 6rem 6rem 6rem;
+  grid-template-rows: 6rem 6rem;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  display: none;
+}
+
+.moveBtn {
+  border: 2px solid whitesmoke;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.795);
+  color: white;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+main .buttons .up {
+  grid-column: 2/4;
+}
+
+/* 
+.moveBtn:hover {
+  transform: scale(0.9);
+  background-color: rgba(245, 245, 245, 0.799);
+  color: black;
+} */
+
+.moveBtn:active {
+  transform: scale(0.9);
+  background-color: rgba(245, 245, 245, 0.491);
+  color: black;
+}
+
+.moveBtn:focus {
+  outline: none;
+}
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  header .invisible-item {
+    display: none;
+  }
+
+  main {
+    top: 50%;
+  }
+
+  .board {
+    width: 45rem;
+    height: 45rem;
+  }
+  .buttons {
+    display: grid;
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  main {
+    top: 50%;
+  }
+
+  .board {
+    width: 44rem;
+    height: 44rem;
+  }
+}

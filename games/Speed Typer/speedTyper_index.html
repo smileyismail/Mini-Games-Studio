@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="speedTyper_style.css" />
+    <title>Speed Typer</title>
+  </head>
+  <body>
+    <button
+      type="button"
+      title="Select Difficulty"
+      id="settings_btn"
+      class="settings-btn"
+    >
+      <i class="fa-solid fa-gear"></i>
+    </button>
+
+    <header id="header">
+      <div class="invisible-item"></div>
+      <form id="settings_form">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </form>
+      <div><a href="../../index.html" class="btn">Play More Games</a></div>
+    </header>
+
+    <main>
+      <h2>
+        <i class="fa-solid fa-angles-right"></i> Speed Typer
+        <i class="fa-solid fa-angles-right"></i>
+      </h2>
+
+      <p id="time_container">Time left: <span id="time">10s</span></p>
+
+      <p id="score_container">Score: <span id="score">0</span></p>
+
+      <small>Type the following:</small>
+
+      <h1 id="word" class="word"></h1>
+
+      <input
+        type="text"
+        id="text"
+        autocomplete="off"
+        placeholder="Type the word here..."
+        autofocus
+      />
+
+      <div id="game_end_container"></div>
+    </main>
+
+    <script src="speedTyper_script.js"></script>
+  </body>
+</html>

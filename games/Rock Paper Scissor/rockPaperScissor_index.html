@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="rockPaperScissor_style.css" />
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <header>
+      <div class="invisible-item">asd</div>
+      <h1>Rock Paper Scissors Fire</h1>
+      <div><a href="../../index.html" class="btn">Play More Games</a></div>
+    </header>
+
+    <main>
+      <div class="elements">
+        <button type="button" class="element" id="rock">✊</button>
+        <button type="button" class="element" id="paper">✋</button>
+        <button type="button" class="element" id="scissor">✌</button>
+        <button type="button" class="element" id="fire">🔥</button>
+      </div>
+      <div class="results">
+        <div class="result yourResult">
+          <h2>You</h2>
+          <p id="yourScore score">Score: 0</p>
+        </div>
+        <div class="result computerResult">
+          <h2>Computer</h2>
+          <p id="computerScore score">Score: 0</p>
+        </div>
+      </div>
+      <div class="history">
+        <div class="selected" id="yourChoices">🔥</div>
+        <div class="selected" id="computerChoices">🔥</div>
+      </div>
+      <button type="button" onclick="location.reload()" class="restartBtn">
+        Restart Game
+      </button>
+    </main>
+
+    <script src="rockPaperScissor_script.js"></script>
+  </body>
+</html>

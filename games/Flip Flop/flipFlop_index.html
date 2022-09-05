@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="flipFlop_style.css" />
+    <script src="flipFlop_script.js" defer></script>
+    <title>Flip Flop</title>
+  </head>
+  <body>
+    <header>
+      <div class="invisible-item"></div>
+      <h1>Flip Flop</h1>
+      <div><a href="../../index.html" class="btn">Play More Games</a></div>
+    </header>
+
+    <div class="container">
+      <div class="messageContainer">
+        <h4 id="score" class="score">Score: 0</h4>
+        <span id="message">Select any 2 Cards</span>
+        <button type="button" id="play_again" onclick="location.reload()">
+          Play Again
+        </button>
+      </div>
+      <div class="cards_container" id="cards_container"></div>
+    </div>
+  </body>
+</html>

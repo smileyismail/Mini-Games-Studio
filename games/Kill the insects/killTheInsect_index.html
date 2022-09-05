@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="killTheInsect_style.css" />
+    <title>Kill the Insects</title>
+  </head>
+  <body>
+    <section class="screen start_screen">
+      <h1>Kill the Insect</h1>
+      <button type="button" id="start_btn" class="btn start_btn">
+        Play Game
+      </button>
+    </section>
+
+    <section class="screen select_screen">
+      <h1>Select the Insect you want to kill</h1>
+      <ul class="insect_list">
+        <li>
+          <button class="select_insect_btn">
+            <img src="assets/Fly.png" alt="fly" />
+            <p>Fly</p>
+          </button>
+        </li>
+        <li>
+          <button class="select_insect_btn">
+            <img src="assets/Ant.png" alt="ant" />
+            <p>Ant</p>
+          </button>
+        </li>
+        <li>
+          <button class="select_insect_btn">
+            <img src="assets/Bee.png" alt="bee" />
+            <p>Bee</p>
+          </button>
+        </li>
+        <li>
+          <button class="select_insect_btn">
+            <img src="assets/Bettle.png" alt="bettle" />
+            <p>Bettle</p>
+          </button>
+        </li>
+        <li>
+          <button class="select_insect_btn">
+            <img src="assets/Bug.png" alt="bug" />
+            <p>Bug</p>
+          </button>
+        </li>
+        <li>
+          <button class="select_insect_btn">
+            <img src="assets/Mosquito.png" alt="mosquito" />
+            <p>Mosquito</p>
+          </button>
+        </li>
+        <li>
+          <button class="select_insect_btn">
+            <img src="assets/Wasp.png" alt="wasp" />
+            <p>Wasp</p>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="screen game_screen" id="game_screen">
+      <h3 id="time" class="time">Time: 00:00</h3>
+      <h3 id="score" class="score">0</h3>
+      <h5 id="message" class="message">
+        Are you Frustrated?<br />
+        Well Kill some more Insects!!
+      </h5>
+    </section>
+
+    <script src="killTheInsect_script.js"></script>
+  </body>
+</html>
